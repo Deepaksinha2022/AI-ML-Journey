@@ -1,0 +1,252 @@
+# 1. Random Forest (RF)
+
+# RF works by:
+
+# averaging many diverse trees
+
+# Main goal:
+
+# variance reduction
+# RF Core Ideas
+# bootstrap sampling
+# feature randomness
+# decorrelated trees
+# averaging predictions
+# RF Deep Insight
+# Diversity stabilizes prediction.
+
+# Single tree:
+
+# high variance
+# unstable
+
+# RF:
+
+# stable
+# generalized
+# Important RF Hyperparameters
+# Parameter	Role
+# n_estimators	no. of trees
+# max_depth	tree complexity
+# max_features	randomness
+# min_samples_leaf	overfitting control
+# OOB Score
+
+# OOB =
+
+# internal validation using unseen bootstrap rows
+# 2. XGBoost
+
+# XGBoost works by:
+
+# sequential error correction
+
+# Each tree:
+
+# corrects previous residuals
+# XGBoost Core Ideas
+# boosting
+# residual fitting
+# gradient optimization
+# sequential learning
+# Deep XGBoost Insight
+# Boosting progressively refines decision boundaries.
+# Important XGBoost Parameters
+# Parameter	Role
+# learning_rate	correction speed
+# n_estimators	no. of refinements
+# max_depth	complexity
+# gamma	split restriction
+# subsample	randomness
+# reg_alpha	sparsity
+# reg_lambda	stabilization
+# Learning Rate
+
+# Low LR:
+
+# stable learning
+# more trees needed
+
+# High LR:
+
+# aggressive optimization
+# overfitting risk
+# 3. Imbalanced Learning
+
+# Fraud data:
+
+# highly imbalanced
+
+# Accuracy alone:
+
+# misleading
+# Important Metrics
+# Metric	Meaning
+# Precision	false alarm control
+# Recall	fraud capture
+# ROC-AUC	ranking quality
+# PR-AUC	imbalance evaluation
+# F1	precision-recall balance
+# Key Imbalance Insight
+# Fraud optimization is asymmetric.
+
+# Missing fraud usually:
+
+# costlier than false positives
+# 4. Explainable AI (XAI)
+
+# Feature importance:
+
+# predictive usefulness
+
+# NOT:
+
+# causality
+# SHAP
+
+# SHAP explains:
+
+# feature contribution to one prediction
+# SHAP Formula
+# Prediction = Baseline + Feature Contributions
+# SHAP Values
+# SHAP	Meaning
+# Positive	increases prediction
+# Negative	reduces prediction
+# Global vs Local
+# Global	Local
+# overall behavior	individual prediction
+# averaged logic	contextual logic
+# Deep Explainability Insight
+# Same fraud score can emerge through different behavioral pathways.
+# 5. Fraud Feature Engineering
+
+# Fraud detection is:
+
+# behavioral anomaly modeling
+
+# NOT just:
+
+# transaction classification
+# Strong Fraud Features
+
+# ✅ behavioral features
+# ✅ temporal features
+# ✅ velocity features
+# ✅ aggregation features
+# ✅ interaction features
+
+# Raw vs Behavioral Features
+# Raw	Behavioral
+# amount	amount / avg_amount
+# txn count	velocity
+# login time	deviation from usual time
+# Deep Fraud Insight
+# Behavioral deviation matters more than isolated values.
+# 6. Temporal Intelligence
+
+# Fraud often revealed by:
+
+# timing
+# sequence
+# velocity
+# burst behavior
+# Velocity
+
+# Velocity =
+
+# activity rate over time
+
+# Examples:
+
+# txns/minute
+# failed logins/hour
+# Sliding Windows
+
+# Used for:
+
+# real-time behavioral monitoring
+# Deep Temporal Insight
+# Fraud is dynamic behavioral activity over time.
+# 7. Aggregation Features
+
+# Aggregation creates:
+
+# behavioral summaries
+
+# Examples:
+
+# avg spend
+# total txns
+# unique devices
+# variability
+# Deep Aggregation Insight
+# Aggregation transforms raw events into behavioral intelligence.
+# 8. Interaction Features
+
+# Fraud often emerges through:
+
+# combinations of weak signals
+
+# Examples:
+
+# high velocity + new device
+# foreign txn + midnight
+# failed login + transfer
+# Deep Interaction Insight
+# Fraud behavior is contextual and nonlinear.
+# 9. Leakage
+
+# Leakage =
+
+# model sees future/unavailable information
+# Leakage Types
+
+# ✅ future leakage
+# ✅ aggregation leakage
+# ✅ preprocessing leakage
+# ✅ target leakage
+
+# Leakage Insight
+# Leakage creates fake intelligence.
+# Leakage vs Overfitting
+# Leakage	Overfitting
+# forbidden information	memorization
+# fake confidence	unstable learning
+# 10. Feature Engineering Pipelines
+
+# Pipeline = structured ML workflow
+
+# Fraud Pipeline
+# Raw Data
+# → Cleaning
+# → Aggregations
+# → Temporal Features
+# → Interactions
+# → Encoding
+# → Modeling
+# → Monitoring
+# Pipeline Insight
+# Fraud ML heavily depends on real-time behavioral pipelines.
+# 11. End-to-End Fraud ML
+
+# Modern fraud ML combines:
+
+# ✅ behavioral intelligence
+# ✅ temporal dynamics
+# ✅ boosting/ensembles
+# ✅ leakage-safe engineering
+# ✅ explainability
+# ✅ monitoring
+
+# Final Week 6 Mental Model
+# Behavior
+# → Temporal Dynamics
+# → Aggregations & Interactions
+# → Leakage-Safe Features
+# → RF/XGBoost
+# → Threshold Optimization
+# → SHAP Explainability
+# → Monitoring
+# One-Line Week 6 Summary
+# Modern fraud ML systems work by learning contextual behavioral anomalies through temporal, aggregated, interaction-driven, leakage-safe, and explainable intelligence pipelines
